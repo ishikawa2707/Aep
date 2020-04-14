@@ -1,0 +1,25 @@
+package Aep;
+
+public class Jogador {
+	private String Nome;
+	private int Idadde;
+
+	public Jogador() {
+		System.out.println("Inserindo Jogador:");
+	}
+
+	public Jogador(String Nome, int Idade) {
+		this.Idade(Idade);
+	}
+
+	public void Nome(String Nome) {
+		this.Nome = Nome;
+	}
+
+	public void Idade(int Idade) {
+		if (Idade < 16) {
+			throw new RuntimeException("Jogador não tem idade suficiente para entrar no time");
+		}
+		this.Idadde = Idade;
+	}
+}
