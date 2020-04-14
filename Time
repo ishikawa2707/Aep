@@ -1,0 +1,48 @@
+package Aep;
+
+public class Time {
+	private String Nome;
+	private int AnoDeFundacao;
+	private String Mascote;
+	private String NomeEstadio;
+	private String Patrocinio;
+	private int QuantidadeDeJogadorNoTime;
+
+	public Time() {
+		System.out.println("Criando o Time:");
+	}
+
+	public Time(String Nome, int AnoDeFundacao, String Mascote, String NomeEstadio, String Patriocinio,
+			int QuantidadeDeJogadorNoTime) {
+		this.setQuantidadeDeJogadorNoTime(QuantidadeDeJogadorNoTime);
+	}
+
+	public void setNome(String Nome) {
+		this.Nome = Nome;
+	}
+
+	public void setAnoDeFundacao(int AnoDeFundacao) {
+		this.AnoDeFundacao = AnoDeFundacao;
+	}
+
+	public void Mascote(String Mascote) {
+		this.Mascote = Mascote;
+
+	}
+
+	public void setNomeEstadio(String NomeEstadio) {
+		this.NomeEstadio = NomeEstadio;
+	}
+
+	public void setPatrocinio(String Patrocinio) {
+		this.Mascote = Mascote;
+	}
+
+	public void setQuantidadeDeJogadorNoTime(int QuantidadeDeJogadorNoTime) {
+		if (QuantidadeDeJogadorNoTime < 20) {
+			throw new RuntimeException("Inválido, o time deve conter no minimo 20 jogadores.");
+		}
+		this.QuantidadeDeJogadorNoTime = QuantidadeDeJogadorNoTime;
+	}
+
+}
